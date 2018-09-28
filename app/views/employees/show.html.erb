@@ -1,0 +1,12 @@
+<h1><%= @employee.full_name %></h1>
+
+<strong>Alias: </strong> <%= @employee.alias %> <br>
+<strong>Title: </strong> <%= @employee.title %> <br>
+<strong>Office: </strong> <%= @employee.office %> <br>
+<strong>Dog name:</strong> <%= @employee.dog_name %> <br>
+<br>
+<img src="<%= @employee.img_url %>">
+<br>
+<form action="/employees" method="get">
+<input type="submit" value="Go back to Index">
+</form>
