@@ -1,0 +1,15 @@
+<h1><%= @dog.name %></h1>
+
+<strong>Age:</strong> <%= @dog.age %> <br>
+<strong>Breed:</strong> <%= @dog.breed %> <br>
+<br>
+
+Owners:
+<% @dog.employees.each do |employee| %>
+<li><%= employee.first_name %> <%= employee.last_name %></li>
+<% end %>
+
+<br>
+<form action="/dogs" method="get">
+<input type="submit" value="Go back to Index">
+</form>
