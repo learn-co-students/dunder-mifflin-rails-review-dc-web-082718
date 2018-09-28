@@ -1,0 +1,20 @@
+<h1>Create a New Dog</h1>
+
+<%= form_for @dog do |f| %>
+      <%= f.label :name %>
+      <%= f.text_field :name %> <br>
+      <%= f.label :breed %>
+      <%= f.text_field :breed %> <br>
+      <%= f.label :age %>
+      <%= f.text_field :age %> <br>
+
+<h3>Dog</h3>
+      <%= f.fields_for :employees do |employee| %>
+          First Name: <%= employee.text_field :first_name %> <br>
+          Last Name: <%= employee.text_field :last_name %> <br>
+          Alias: <%= employee.text_field :alias %> <br>
+          Title: <%= employee.text_field :title %> <br>
+          Office: <%= employee.text_field :office %> <br>
+      <%end%>
+  <%= f.submit %>
+<%end%>
