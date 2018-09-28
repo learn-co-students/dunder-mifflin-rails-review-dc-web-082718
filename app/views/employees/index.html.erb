@@ -1,0 +1,13 @@
+<h1>Employees Index</h1>
+
+<h2><%=link_to "Create an Employee?", "employees/new"%></h2>
+
+<h2>Employee Listing</h2>
+
+<ul>
+  <% @employees.each do |employee| %>
+    <li><%= link_to employee.full_name, employee_path(employee)%> </li>
+  <% end %>
+</ul>
+
+<h3><%=link_to "See Dogs Instead?", dogs_path%></h3>
