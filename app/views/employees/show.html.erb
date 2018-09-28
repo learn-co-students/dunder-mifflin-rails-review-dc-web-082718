@@ -7,6 +7,11 @@
 <br>
 <img src="<%= @employee.img_url %>">
 <br>
-<form action="/employees" method="get">
-<input type="submit" value="Go back to Index">
-</form>
+
+<%= form_tag '/employees', method: :get do %>
+  <%= submit_tag "Go back to Index" %>
+<% end %><br>
+<br>
+<%= form_tag "/employees/#{@employee.id}", method: :delete do %>
+  <%= submit_tag "Or delete this user" %>
+<% end %>
